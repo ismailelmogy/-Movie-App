@@ -7,5 +7,6 @@ target 'Movies App' do
 
   # Pods for Movies App
   pod 'Alamofire'
+  pod 'SwiftyJSON'
 
 end
