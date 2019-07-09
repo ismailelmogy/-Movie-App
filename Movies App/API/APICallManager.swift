@@ -15,11 +15,10 @@ import Alamofire
 import SwiftyJSON
 
 
-//let API_BASE_URL = "https://api.themoviedb.org/3/authentication/token/new"
 class APICallManager {
     static let instance = APICallManager()
     func getrequestToken (completionHandler: @escaping (_ token:String?) -> Void){
-        let url = "https://api.themoviedb.org/3/authentication/token/new?api_key=a6b36328e027adf7d2cf115046c6dd11"
+        let url = URLS.CREATE_TOKEN
     
         Alamofire.request(url)
         .responseJSON { response in
@@ -39,7 +38,7 @@ class APICallManager {
 
     func login(userName : String , password :String ,requestToken :String, completionHandeler : @escaping (_ error :Error? , _ success : Bool )-> Void){
         
-        let loginUrl : String = "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=a6b36328e027adf7d2cf115046c6dd11"
+        let loginUrl : String = URLS.LOGIN_URL
         let parameters = [
             "username": userName , //email
             "password": password ,//password

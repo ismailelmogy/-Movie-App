@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let def = UserDefaults.standard
+        if let _ = def.object(forKey: Utils.USER_NAME) as? String , let _ = def.object(forKey: Utils.PASSWORD) as? String{
+            let tab = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+            window?.rootViewController = tab
+        }
+ 
         return true
     }
 

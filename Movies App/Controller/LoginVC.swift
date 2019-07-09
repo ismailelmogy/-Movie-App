@@ -52,7 +52,11 @@ class LoginVC: UIViewController {
             APICallManager.instance.login(userName: self.userNameTF.text!, password: self.passwordTF.text!, requestToken: self.requestToken!, completionHandeler:
                 { (error : Error?, success : Bool) in
                     if success {
-                     self.navigateToHome()
+                     let def = UserDefaults.standard
+                     def.setValue(self.userNameTF.text!, forKey: Utils.USER_NAME)
+                     def.setValue(self.passwordTF.text!, forKey: Utils.PASSWORD)
+                     def.synchronize()
+                     self.navigateToMainVC()
                     }
                     else{
                         self.alertMessage = "Make Sure that user name and password or may be token expired"
@@ -65,9 +69,13 @@ class LoginVC: UIViewController {
     }
     
     
-    func navigateToHome () {
-        let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeVC
-        self.navigationController?.pushViewController(homeVC, animated: true)
+    func navigateToMainVC() {
+        /*
+        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "main") as! MainVC
+        self.navigationController?.pushViewController(mainVC, animated: true)
+ */
+        let tab = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+         self.navigationController?.pushViewController(tab, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

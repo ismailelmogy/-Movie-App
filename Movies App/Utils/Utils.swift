@@ -10,6 +10,8 @@ import UIKit
 
 class Utils: NSObject {
     
+    static let USER_NAME = "user_name"
+    static let PASSWORD = "password"
     var rootWindow: UIWindow!
     
     // Singleton.
