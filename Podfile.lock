@@ -1,20 +1,39 @@
 PODS:
   - Alamofire (4.7.2)
+  - Cosmos (8.0.2)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Cosmos (from `https://github.com/marketplacer/Cosmos.git`, tag `8.0.2`)
+  - SDWebImage
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - SDWebImage
     - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Cosmos:
+    :git: https://github.com/marketplacer/Cosmos.git
+    :tag: 8.0.2
+
+CHECKOUT OPTIONS:
+  Cosmos:
+    :git: https://github.com/marketplacer/Cosmos.git
+    :tag: 8.0.2
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Cosmos: 83d7e1c5289839a954dfa45376a11e9a9cef0a13
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: f96626cb691b799404925dda6c3c2967a6313d5f
+PODFILE CHECKSUM: 0cecc115ead881664f08f6e8273b247525116710
 
 COCOAPODS: 1.5.0

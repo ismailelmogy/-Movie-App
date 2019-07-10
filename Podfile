@@ -8,5 +8,7 @@ target 'Movies App' do
   # Pods for Movies App
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SDWebImage'
+  pod 'Cosmos', git: 'https://github.com/marketplacer/Cosmos.git', tag: '8.0.2'
 
 end

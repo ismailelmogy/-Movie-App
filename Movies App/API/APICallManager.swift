@@ -51,6 +51,7 @@ class APICallManager {
                 switch response.result {
                 case .success(let value):
                     let json  = JSON(value)
+                    print("\(json)")
                     if let success = json["success"].int , success == 1
                     {
                         // show alert
