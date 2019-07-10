@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="1480.8" y="1211.2443778110946"/>
         </scene>
-        <!--Movie Details View Controller-->
+        <!--Movie DetailsVC-->
         <scene sceneID="25i-C7-1ur">
             <objects>
-                <viewController storyboardIdentifier="details" id="d7C-61-d96" customClass="MovieDetailsViewController" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="details" id="d7C-61-d96" customClass="MovieDetailsVC" customModule="Movies_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dmB-XL-FOt"/>
                         <viewControllerLayoutGuide type="bottom" id="tFi-mz-PZx"/>

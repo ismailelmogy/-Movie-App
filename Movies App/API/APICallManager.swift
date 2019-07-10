@@ -1,14 +1,3 @@
-//
-//  APICallManager.swift
-//  Movies App
-//
-//  Created by Esraa Hassan on 7/8/19.
-//  Copyright © 2019 Developers. All rights reserved.
-//
-
-
-
-
 
 import UIKit
 import Alamofire
@@ -62,17 +51,13 @@ class APICallManager {
                         completionHandeler(nil , false)
                     }
                     
-            
                 case .failure(let error):
                     completionHandeler(error,false)
                     print (error)
                     
                 }
                 
-                
-        
-        
-    }
+                }
    
 
     }
